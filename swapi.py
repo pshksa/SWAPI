@@ -13,9 +13,7 @@ class APIRequester:
     def get(self, endpoint=""):
         
         # Выполняет GET-запрос к указанному эндпоинту API.
-        # :param endpoint: Эндпоинт API (например, "films/1/"). По умолчанию — пустая строка.
-        # :return: Объект Response библиотеки requests.
-        
+                
         # Формируем полный URL, добавляя эндпоинт к базовому URL
         url = f"{self.base_url}/{endpoint}"
         # Выполняем GET-запрос
@@ -38,8 +36,7 @@ class SWRequester(APIRequester):
     def get_sw_categories(self):
         
         # Получает список доступных категорий из SWAPI.
-        # :return: Список категорий (например, ["films", "people", "planets"]).
-        
+                
         # Выполняем GET-запрос к базовому URL SWAPI
         response = self.get()
         # Преобразуем JSON-ответ в словарь Python
@@ -50,9 +47,7 @@ class SWRequester(APIRequester):
     def get_sw_info(self, sw_type):
         
         # Получает данные по указанной категории из SWAPI.
-        # :param sw_type: Категория (например, "films", "people").
-        # :return: Ответ API в виде строки.
-        
+                
         # Выполняем GET-запрос к указанной категории
         response = self.get(sw_type)
         # Возвращаем текстовое содержимое ответа
