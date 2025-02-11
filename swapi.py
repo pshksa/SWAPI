@@ -28,15 +28,11 @@ class APIRequester:
 class SWRequester(APIRequester):
     def __init__(self):
         
-        # Конструктор класса. Инициализирует базовый URL для SWAPI.
-        
         # Вызываем конструктор родительского класса с базовым URL SWAPI
         super().__init__("https://swapi.dev/api")
 
     def get_sw_categories(self):
         
-        # Получает список доступных категорий из SWAPI.
-                
         # Выполняем GET-запрос к базовому URL SWAPI
         response = self.get()
         # Преобразуем JSON-ответ в словарь Python
@@ -46,8 +42,6 @@ class SWRequester(APIRequester):
 
     def get_sw_info(self, sw_type):
         
-        # Получает данные по указанной категории из SWAPI.
-                
         # Выполняем GET-запрос к указанной категории
         response = self.get(sw_type)
         # Возвращаем текстовое содержимое ответа
