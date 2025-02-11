@@ -24,7 +24,7 @@ class APIRequester:
         return response
 
 
-# Класс для работы с API "Звёздных войн" (SWAPI)
+# Наследник для работы с API "Звёздных войн" (SWAPI)
 class SWRequester(APIRequester):
     def __init__(self):
         
