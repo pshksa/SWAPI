@@ -18,7 +18,7 @@ class APIRequester:
         try:
         # Выполняем GET-запрос
             response = requests.get(url)
-        # Проверяем статус ответа. Если статус указывает на ошибку, выбрасываем исключение
+        # Проверяем статус ответа. Если статус указывает на ошибку, выбрасываем  исключение
             response.raise_for_status()
         # Возвращаем объект Response
             return response
